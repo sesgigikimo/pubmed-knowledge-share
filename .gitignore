@@ -1,0 +1,5 @@
+# 本機預覽 / 暫存
+__pycache__/
+*.pyc
+.DS_Store
+httpd.log

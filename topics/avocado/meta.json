@@ -1,0 +1,25 @@
+{
+  "title": "酪梨油",
+  "emoji": "🥑",
+  "summary": "酪梨油對心血管、發炎、血糖代謝和關節，研究怎麼說？",
+  "status": "published",
+  "entry": "index.html",
+  "subtopics": [
+    {
+      "file": "metabolic.html",
+      "label": "代謝"
+    },
+    {
+      "file": "cardiovascular.html",
+      "label": "心血管"
+    },
+    {
+      "file": "inflammation.html",
+      "label": "發炎"
+    },
+    {
+      "file": "osteoarthritis.html",
+      "label": "骨關節炎"
+    }
+  ]
+}

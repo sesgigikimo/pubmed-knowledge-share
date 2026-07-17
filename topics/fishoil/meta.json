@@ -1,0 +1,21 @@
+{
+  "title": "魚油 Omega-3",
+  "emoji": "🐟",
+  "summary": "魚油顧心臟、護腦、延壽？發炎又有沒有效？一次看懂。",
+  "status": "published",
+  "entry": "index.html",
+  "subtopics": [
+    {
+      "file": "mortality.html",
+      "label": "全死因"
+    },
+    {
+      "file": "cardiovascular.html",
+      "label": "心血管"
+    },
+    {
+      "file": "cognition.html",
+      "label": "認知"
+    }
+  ]
+}

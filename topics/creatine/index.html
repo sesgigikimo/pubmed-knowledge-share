@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肌酸是什麼？真的那麼可怕嗎？</title>
+<style>
+  :root{
+    --bg:#faf7f2; --card:#ffffff; --ink:#2b2b2b; --soft:#6b6b6b;
+    --green:#2d6a4f; --green-light:#d8f3dc; --orange:#e76f51; --orange-light:#fde2e1;
+    --yellow:#f4a261; --yellow-light:#fff3e0; --line:#e8e0d5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.8;
+    font-size:19px; padding:0 0 60px;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px;}
+  .hero{
+    background:linear-gradient(135deg,#2d6a4f 0%,#52b788 100%);
+    color:#fff; padding:48px 24px 44px; text-align:center; border-radius:0 0 28px 28px;
+  }
+  .hero h1{font-size:30px; line-height:1.4; margin-bottom:12px; font-weight:700;}
+  .hero .sub{font-size:19px; opacity:.95;}
+  .hero .tag{display:inline-block; background:rgba(255,255,255,.2); padding:6px 16px; border-radius:20px; font-size:15px; margin-bottom:18px;}
+  section{padding:36px 0 8px;}
+  h2{font-size:25px; color:var(--green); margin-bottom:18px; font-weight:700; text-align:center;}
+  h2 .num{display:inline-block; background:var(--green); color:#fff; width:38px; height:38px; line-height:38px; border-radius:50%; font-size:20px; margin-right:8px;}
+  .lead{text-align:center; color:var(--soft); font-size:18px; margin-bottom:24px;}
+  .card{
+    background:var(--card); border-radius:18px; padding:24px 22px; margin-bottom:18px;
+    box-shadow:0 2px 12px rgba(0,0,0,.05); border:1px solid var(--line);
+  }
+  .myth-box{display:grid; grid-template-columns:1fr; gap:14px;}
+  .myth{
+    border-radius:16px; padding:20px 20px; border:2px solid;
+  }
+  .myth .q{font-size:18px; margin-bottom:12px; display:flex; gap:10px; align-items:flex-start;}
+  .myth .a{font-size:18px; display:flex; gap:10px; align-items:flex-start; padding-top:12px; border-top:1px dashed rgba(0,0,0,.12);}
+  .myth .icon{font-size:24px; flex-shrink:0;}
+  .myth.bad{border-color:var(--orange); background:var(--orange-light);}
+  .myth.bad .q{color:#9b3520;}
+  .myth.good{border-color:var(--green); background:var(--green-light);}
+  .myth.good .a{color:#1b4332;}
+  .stat-row{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:6px;}
+  .stat{
+    background:var(--card); border-radius:16px; padding:22px 14px; text-align:center;
+    box-shadow:0 2px 12px rgba(0,0,0,.05); border:1px solid var(--line);
+  }
+  .stat .big{font-size:40px; font-weight:700; color:var(--green); line-height:1.1;}
+  .stat .lbl{font-size:18px; color:var(--soft); margin-top:6px;}
+  .stat.warn .big{color:var(--orange);}
+  .list{list-style:none;}
+  .list li{padding:10px 0 10px 32px; position:relative; border-bottom:1px solid var(--line);}
+  .list li:last-child{border-bottom:none;}
+  .list li:before{content:"✓"; position:absolute; left:0; top:10px; color:var(--green); font-weight:700; font-size:20px;}
+  .list li.warn:before{content:"!"; color:var(--orange);}
+  .callout{
+    background:var(--yellow-light); border-left:5px solid var(--yellow);
+    padding:18px 20px; border-radius:0 12px 12px 0; margin:18px 0; font-size:18px;
+  }
+  .callout.alert{background:var(--orange-light); border-color:var(--orange);}
+  .callout strong{color:var(--ink);}
+  .age-grid{display:grid; grid-template-columns:1fr; gap:14px;}
+  .age-card{background:var(--card); border-radius:16px; padding:20px; border:1px solid var(--line); box-shadow:0 2px 12px rgba(0,0,0,.05);}
+  .age-card .head{font-weight:700; color:var(--green); font-size:19px; margin-bottom:8px;}
+  .age-card .body{font-size:18px; color:var(--ink);}
+  .age-card .src{font-size:14px; color:var(--soft); margin-top:8px;}
+  .coi-box{
+    background:#fff8f0; border:2px solid var(--orange); border-radius:16px; padding:22px;
+  }
+  .coi-box .title{font-size:20px; font-weight:700; color:#9b3520; margin-bottom:12px;}
+  .conclusion{
+    background:var(--green); color:#fff; border-radius:20px; padding:30px 26px; margin-top:10px;
+  }
+  .conclusion h3{font-size:22px; margin-bottom:16px; text-align:center;}
+  .conclusion .point{display:flex; gap:12px; margin-bottom:14px; font-size:19px; align-items:flex-start;}
+  .conclusion .point .n{background:#fff; color:var(--green); width:30px; height:30px; line-height:30px; border-radius:50%; text-align:center; font-weight:700; flex-shrink:0; font-size:18px;}
+  .foot{text-align:center; color:var(--soft); font-size:14px; margin-top:30px; line-height:1.7;}
+  .foot a{color:var(--green);}
+  @media(max-width:520px){
+    body{font-size:18px;}
+    .hero h1{font-size:25px;}
+    .stat .big{font-size:34px;}
+  }
+</style>
+</head>
+<body>
+<!--ELDER-NAV--><a href="../../index.html" style="display:block;max-width:720px;margin:0 auto 16px;padding:16px 20px;background:#b8420f;color:#fff;font-size:20px;font-weight:bold;text-align:center;text-decoration:none;border-radius:14px;min-height:48px;box-sizing:border-box;">‹ 回首頁</a>
+
+
+<div class="hero">
+  <span class="tag">📖 查證 68 篇醫學文獻後的真實結論</span>
+  <h1>肌酸真的那麼可怕嗎？<br>一篇講清楚</h1>
+  <div class="sub">很多人一聽到「肌酸」就覺得是化學藥品、會傷身<br>我們把醫學文獻查了一遍，告訴你真相</div>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <h2><span class="num">1</span>肌酸是什麼？</h2>
+    <div class="lead">先說最重要的一件事——</div>
+    <div class="card">
+      <p style="font-size:20px;"><strong>肌酸不是化學合成的藥。</strong></p>
+      <p style="margin-top:12px;">它本來就存在於你的身體裡。你的肝臟、腎臟、胰臟每天都在自己合成肌酸，存放在肌肉裡，幫助肌肉收縮、產生能量。</p>
+      <p style="margin-top:12px;">你吃<strong>牛肉、豬肉、魚肉</strong>的時候，也吃下了肌酸。一公斤紅肉大約含 4-5 克肌酸。</p>
+      <p style="margin-top:12px; color:var(--soft); font-size:18px;">所以補充肌酸，比較像「把身體本來就有的東西補夠」，而不是吃一種外來的化學毒物。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span>3 個常見迷思</h2>
+    <div class="myth-box">
+      <div class="myth bad">
+        <div class="q"><span class="icon">❓</span><span><strong>迷思一</strong>：肌酸是化學藥品，吃了傷身</span></div>
+        <div class="a"><span class="icon">✅</span><span><strong>事實</strong>：肌酸是身體自己合成的物質，肉類裡也有。研究追蹤長期使用者（最長 21 個月）的健康指標，沒有發現明顯異常。</span></div>
+      </div>
+      <div class="myth bad">
+        <div class="q"><span class="icon">❓</span><span><strong>迷思二</strong>：肌酸會把腎搞壞</span></div>
+        <div class="a"><span class="icon">✅</span><span><strong>事實</strong>：把 6 篇研究、上百人數據統合分析的結論是「在一般劑量下，肌酸不會造成腎損傷」。曾被拿出來講的「吃肌酸腎衰竭」案例，其實當事人同時吃了很多種補充品，無法證明是肌酸害的。</span></div>
+      </div>
+      <div class="myth bad">
+        <div class="q"><span class="icon">❓</span><span><strong>迷思三</strong>：肌酸會讓人掉頭髮</span></div>
+        <div class="a"><span class="icon">✅</span><span><strong>事實</strong>：只有 2009 年一項小型研究指出可能影響某個荷爾蒙，後來並沒有被大型研究證實。2025 年有一篇專門做的隨機對照試驗，也沒確認會掉髮。</span></div>
+      </div>
+    </div>
+    <div class="callout alert">
+      <strong>但有一個但書：</strong>如果你<strong>本來就有腎臟病</strong>，吃肌酸前一定要先問醫生。研究說的是「健康人的腎臟沒事」，不是「所有人都能隨便吃」。
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span>我們真的查了文獻</h2>
+    <div class="lead">不是憑感覺，是查了 68 篇 PubMed 醫學文獻的結果</div>
+    <div class="stat-row">
+      <div class="stat"><div class="big">68</div><div class="lbl">篇引用文獻逐一查證</div></div>
+      <div class="stat"><div class="big">63</div><div class="lbl">篇確認與肌酸相關</div></div>
+      <div class="stat"><div class="big">32</div><div class="lbl">篇被其他論文引用超過 10 次</div></div>
+      <div class="stat warn"><div class="big">5</div><div class="lbl">篇跟肌酸無關（混進去的雜訊）</div></div>
+    </div>
+    <div class="callout" style="margin-top:18px;">
+      <strong>什麼叫「被引用」？</strong>就是有別的醫生、學者寫論文時參考了這篇。<strong>被引用越多，代表越受學界認可</strong>。被引用最多的前 10 篇，大多是系統性回顧（把很多研究統整分析的那種），證據等級最高。
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span>年長者能吃嗎？</h2>
+    <div class="lead">我們特地挑出 3 篇以年長者為對象的研究</div>
+    <div class="age-grid">
+      <div class="age-card">
+        <div class="head">✅ 有助增加肌肉量和力氣</div>
+        <div class="body">兩篇統合分析（合計上千名 57-70 歲長者）發現：肌酸搭配阻力訓練，比單純訓練更能增加淨體重、胸推與腿推的力量。</div>
+        <div class="src">資料來源：PMID 29138605、24576864（各被引用 97 次）</div>
+      </div>
+      <div class="age-card">
+        <div class="head">⚠ 但對「衰弱」長者效果有限</div>
+        <div class="body">一篇以 72 歲衰弱長者為對象的研究發現：肌酸並沒有額外提升阻力訓練的效果。不是每個年長者吃了都有效。</div>
+        <div class="src">資料來源：PMID 34358827（被引用 35 次）</div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>給長輩的話：</strong>年紀大肌肉流失是自然現象。肌酸能幫忙，但要搭配運動才有效，而且不是仙丹。如果你胃口還可以、有在動，補充肌酸是合理的；但如果身體已經很虛弱，別期待它能單獨扭轉。
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span>有一件事要誠實告訴你</h2>
+    <div class="lead">不是所有說「肌酸安全」的人都是中立的</div>
+    <div class="coi-box">
+      <div class="title">⚠ 有人一邊說肌酸好，一邊拿肌酸廠商的錢</div>
+      <p>我們查到，被引用最多、專門「反駁肌酸副作用」的那篇文獻（被引用 86 次），<strong>5 位作者同時是全球最大肌酸製造商 AlzChem 的科學顧問</strong>。</p>
+      <p style="margin-top:10px;">另一篇講「肌酸對心臟有好處」的作者，也收了 AlzChem 的酬金寫文章，自己還開了一家賣肌酸補充品的公司。</p>
+      <p style="margin-top:10px; color:#9b3520;"><strong>這不代表他們說的一定是錯的，但聽他們的話時，心裡要打個折扣。</strong></p>
+    </div>
+    <div class="callout" style="margin-top:18px;">
+      <strong>怎麼看才準？</strong>把「有拿廠商錢的研究」和「沒拿錢的獨立研究」擺在一起比對。例如腎功能那篇統合分析（沒有利益衝突）的結論也是「不傷腎」，這就比較可信——多方查證，而不是只聽一面之詞。
+    </div>
+  </section>
+
+  <section>
+    <div class="conclusion">
+      <h3>結論：3 句話講完</h3>
+      <div class="point"><span class="n">1</span><span><strong>肌酸不是化學毒藥</strong>，它是身體本來就有的物質，肉類裡也吃得到。</span></div>
+      <div class="point"><span class="n">2</span><span><strong>對健康人來說相對安全</strong>，常見副作用頂多是胃腸不適、偶爾抽筋，且「會傷腎、會掉髮」目前沒有強證據。</span></div>
+      <div class="point"><span class="n">3</span><span><strong>但它也不是仙丹</strong>，對衰弱長者效果有限；已有腎病的人要先問醫生。聽到有人大力推銷，記得查一下他是不是跟廠商有關係。</span></div>
+    </div>
+  </section>
+
+  <div class="foot">
+    本頁結論整理自 68 篇 PubMed 醫學文獻查證（2026-06-30）<br>
+    完整稽核報告與資料來源見 <code>creatine_citations_audit_report.md</code><br>
+    資料僅供參考，個人健康狀況請諮詢醫師
+  </div>
+
+</div>
+</body>
+</html>
