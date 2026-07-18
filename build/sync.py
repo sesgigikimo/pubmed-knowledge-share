@@ -259,7 +259,7 @@ def build_index():
 INDEX_TEMPLATE = """<!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>長輩健康知識卡</title>
+<title>健康知識卡</title>
 <style>
 :root{color-scheme:light;}
 body{font-family:"Microsoft JhengHei","PingFang TC","Heiti TC","Noto Sans TC",system-ui,sans-serif;
@@ -276,7 +276,7 @@ body{font-family:"Microsoft JhengHei","PingFang TC","Heiti TC","Noto Sans TC",sy
 .foot{max-width:720px;margin:28px auto 0;text-align:center;font-size:14px;color:#8a8074;line-height:1.7;}
 </style></head><body>
 <div class="head">
-<h1>長輩健康知識卡</h1>
+<h1>健康知識卡</h1>
 <p>白話整理的營養與保健文獻，點主題看重點</p>
 <p style="font-size:15px;">{{COUNT}}</p>
 </div>
